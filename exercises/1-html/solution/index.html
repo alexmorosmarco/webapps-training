@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Forces Internet Explorer into the highest supported document mode (EdgeHTML mode; mode supported since IE6; header supported since IE8) -->
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
+    <!-- viewport: 1px will mean a relative size to the current screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- theme-color (Chrome, Firefox OS, Opera): customize browser/OS colour -->
+    <meta name="theme-color" content="#20b2aa">
+    <!-- msapplication-navbutton-color (Windows Phone): customize browser/OS colour -->
+    <meta name="msapplication-navbutton-color" content="#20b2aa">
+    <!-- apple-mobile-web-app-capable (iOS Safari): hides URL and bottom bar = "standalone mode" -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- apple-mobile-web-app-status-bar-style (iOS Safari): customize iOS Status Bar [default, black, black-translucent] -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Foody</title>
+  </head>
+  <body>
+    <!-- TODO: Exercise 1:
+      Write below the design/markup for an online shop web-app that has:
+        - Header:
+          * Menu button on the left
+          * Name of the app in the middle
+          * Cart button on the right
+        - Main content:
+          * List of products to buy with 2 products.
+          * Each product needs following things vertically:
+            - An image
+            - A title
+            - A description
+            - A price
+            - An "Add" button
+    -->
+    <header>
+      <span>Menu</span>
+      <span>Foody</span>
+      <span>Cart</span>
+    </header>
+    <main>
+      <article>
+        <img src="http://lorempixel.com/300/200/food/1" alt="product">
+        <div>Title</div>
+        <div>This is the description</div>
+        <div>20€</div>
+        <div>Add</div>
+      </article>
+      <article>
+        <img src="http://lorempixel.com/300/200/food/2" alt="product">
+        <div>Title</div>
+        <div>This is the description</div>
+        <div>20€</div>
+        <div>Add</div>
+      </article>
+    </main>
+  </body>
+</html>
