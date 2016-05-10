@@ -5,7 +5,7 @@
  *   2. Apply an horizontal flex layout for the header items, in a way that
  *      the title is centered and the other things at both sides limits.
  *   3. Improve the article layout with flex having the price and the "Add"
-*       button in same line but in opposite sides
+ *      button in same line but in opposite sides.
  *   4. Improve the styles of the app:
  *      - Give a background colour to the header.
  *      - Give margins to the header buttons.
@@ -20,26 +20,33 @@ body {
   margin: 0px;
 }
 
+/* Setting these 100% heights are vital so that the scroll area
+   can know its size; otherwise all the page will scroll down like
+   a normal web site */
+html, body {
+  height: 100%;
+}
+
 .vertical-layout {
-   display: flex;
-   flex-direction: column; /* main axis direction (default: row) */
-   height: 100%;
+  display: flex;
+  flex-direction: column; /* main axis direction (default: row) */
 }
 
 header {
   height: 30px;
+  align-items: center; /* flex property for cross axis alignment */
 }
 
 main {
   flex: 1;
+  overflow-y: auto;
 }
 
 .horizontal-layout {
   display: flex;
   flex-direction: row; /* main axis direction (default: row) */
   justify-content: space-between; /* main axis distribution */
-  align-items: center; /* cross axis alignment */
- }
+}
 
 article > img {
   height:200px;
