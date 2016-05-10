@@ -5,8 +5,9 @@
  *   2. Apply an horizontal flex layout for the header items, in a way that
  *      the title is centered and the other things at both sides limits.
  *   3. Improve the article layout with flex having the price and the "Add"
-*       button in same line but in opposite sides
- *   4. Improve the styles of the app:
+ *      button in same line but in opposite sides.
+ *   4. Avoid the layout changes while the images are loading.
+ *   5. Improve the styles of the app:
  *      - Give a background colour to the header.
  *      - Give margins to the header buttons.
  *      - Give a background colour to the main content.
@@ -14,7 +15,6 @@
  *      - Give a background colour to the articles.
  *      - Give margins to the article inner parts.
  *      - Give padding and a rounded border to the header and article buttons.
- *   5. Avoid the layout changes while the images are loading.
  */
 body {
   margin: 0px;
