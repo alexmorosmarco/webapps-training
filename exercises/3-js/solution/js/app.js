@@ -2,5 +2,5 @@
 "use strict";
 
 var App = {
-  version: '0.9.0'
+  version: '0.3.0'
 };

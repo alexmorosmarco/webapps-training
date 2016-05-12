@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+}
+
+/* Setting these 100% heights are vital so that the scroll area
+   can know its size; otherwise all the page will scroll down like
+   a normal web site */
+html, body {
+  height: 100%;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column; /* main axis direction (default: row) */
+}
+
+header {
+  height: 30px;
+  align-items: center; /* flex property for cross axis alignment */
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.horizontal-layout {
+  display: flex;
+  flex-direction: row; /* main axis direction (default: row) */
+  justify-content: space-between; /* main axis distribution */
+}
+
+article > img {
+  height:200px;
+  width:300px;
+}
