@@ -2,7 +2,7 @@
 "use strict";
 
 var App = {
-  version: '0.4.1',
+  version: '0.4.2',
   productsApi: 'http://demo8844552.mockable.io/products',
   /**
    * TODO: Exercise 4.1: create a new property to store the number of products.
