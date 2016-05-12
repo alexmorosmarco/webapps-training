@@ -11,7 +11,7 @@
     var menuButton = document.getElementById('menu-button');
     menuButton.addEventListener('click', function(event) {
       alert('Info: App v' + App.version);
-    }, false);
+    }, true);
 
     /**
      * TODO: Exercise 4.5: show the number of products in the cart info, if
