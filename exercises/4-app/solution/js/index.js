@@ -9,8 +9,24 @@
     console.log('App v' + App.version);
     // Register events on elements now that the DOM content is loaded
     var menuButton = document.getElementById('menu-button');
-    menuButton.addEventListener('click', function(event) {
+    menuButton.addEventListener('click', function (event) {
       alert('Info: App v' + App.version);
+    }, false);
+    /**
+     * TODO: Exercise 4.6: Register the click event of the cart button
+     * and show an alert informing the success on the user's order and resetting
+     * the cart.
+     */
+    var cartButton = document.getElementById('cart-button');
+    cartButton.addEventListener('click', function (event) {
+      if (App.productsNumber) {
+        alert('Your order has been received successfully.\n' +
+              'You will receive it in 45 minutes. Thanks.');
+        App.resetCart();
+      } else {
+        alert('You do not have any products in the cart yet.\n' +
+              'Please add some and try again.');
+      }
     }, false);
 
     /**
@@ -33,7 +49,7 @@
      */
     var request = new XMLHttpRequest();
     request.open('GET', App.productsApi, true);
-    request.onreadystatechange = function() {
+    request.onreadystatechange = function () {
       if (request.readyState == 4 && request.status == 200) {
         var products = JSON.parse(request.responseText);
         var main = document.getElementsByTagName('main')[0];
@@ -48,7 +64,7 @@
     request.send();
   }
 
-  document.addEventListener('DOMContentLoaded', function(event) {
+  document.addEventListener('DOMContentLoaded', function (event) {
     onLoaded();
   }, false);
 }());

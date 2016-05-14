@@ -42,7 +42,7 @@ var App = {
    * Then call this function when product Add button is clicked, but just before
    * that update App.productsNumber increasing it by 1 unit.
    */
-  reloadCartInfo: function () {
+  refreshCartInfo: function () {
     // Implementation here
   }
 };

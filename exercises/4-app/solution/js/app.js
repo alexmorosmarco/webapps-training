@@ -47,9 +47,7 @@ var App = {
     addButton.classList.add('button');
     addButton.innerHTML = "Add";
     addButton.addEventListener('click', function(event) {
-      App.productsNumber++;
-      window.localStorage.setItem('productsNumber', App.productsNumber);
-      App.reloadCartInfo();
+      App.addProductToCart();
     }, false);
     var bottom = document.createElement('div');
     bottom.classList.add('horizontal-layout');
@@ -74,8 +72,18 @@ var App = {
    * Then call this function when product Add button is clicked, but just before
    * that update App.productsNumber increasing it by 1 unit.
    */
-  reloadCartInfo: function () {
-    var cartInfo = document.getElementById('cart-info');
-    cartInfo.innerHTML = "Cart (" + App.productsNumber + ")";
+  refreshCartInfo: function () {
+    var cartButton = document.getElementById('cart-button');
+    cartButton.innerHTML = "Cart (" + App.productsNumber + ")";
+  },
+  addProductToCart: function () {
+    App.productsNumber++;
+    window.localStorage.setItem('productsNumber', App.productsNumber);
+    App.refreshCartInfo();
+  },
+  resetCart: function () {
+    App.productsNumber = 0;
+    window.localStorage.removeItem('productsNumber');
+    App.refreshCartInfo();
   }
 };
