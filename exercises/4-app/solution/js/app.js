@@ -2,7 +2,7 @@
 "use strict";
 
 var App = {
-  version: '0.4.1',
+  version: '0.4.2',
   productsApi: 'http://demo8844552.mockable.io/products',
   /**
    * TODO: Exercise 4.1: create a new property to store the number of products.
@@ -44,6 +44,7 @@ var App = {
     var price = document.createElement('div');
     price.innerHTML = product.price + "€";
     var addButton = document.createElement('div');
+    addButton.classList.add('button');
     addButton.innerHTML = "Add";
     addButton.addEventListener('click', function(event) {
       App.productsNumber++;
@@ -55,11 +56,14 @@ var App = {
     bottom.appendChild(price);
     bottom.appendChild(addButton);
 
+    var footer = document.createElement('footer');
+    footer.appendChild(title);
+    footer.appendChild(description);
+    footer.appendChild(bottom);
+
     var article = document.createElement('article');
     article.appendChild(image);
-    article.appendChild(title);
-    article.appendChild(description);
-    article.appendChild(bottom);
+    article.appendChild(footer);
 
     return article;
   },
