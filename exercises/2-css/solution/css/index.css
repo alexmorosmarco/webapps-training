@@ -1,7 +1,18 @@
 /**
  * TODO: Exercise 2.2: improve the styles of the app:
  *   1. Avoid the header from scrolling. For getting that, give all possible
- *      vertical height/weigth to the "main" tag using flex on its parent.
+ *      vertical height/weigth to the "main" tag using flex on its parent, and
+ *      give some height to the header.
+ *
+ *      In addition set the 'overflow-y' to 'scroll' or 'auto' to the <main>
+ *      so that the content of the <main> do not overflows and allows scrolling.
+ *
+ *      But that will not be enough cause the overflow feature needs that
+ *      the parent has some height so do not forget to set a 100% height to the
+ *      scroll container (<body>). In this case, as the container is <body> and
+ *      its parent (<html>) also has a non defined height, it will also be
+ *      necessary to set a 100% hight to the <html>.
+ *
  *   2. Apply an horizontal flex layout for the header items, in a way that
  *      the title is centered and the other things at both sides limits.
  *   3. Improve the article layout with flex having the price and the "Add"
@@ -9,13 +20,22 @@
  *   4. Avoid the layout changes while the images are loading.
  *   5. Improve the styles of the app:
  *      - Give a background colour to the header.
- *      - Give margins to the header buttons.
+ *      - Give sides padding to the header area so that its content is not
+ *        fixed to the screen limits.
  *      - Give a background colour to the main content.
- *      - Give padding to the main content.
- *      - Give a background colour to the articles.
- *      - Give margins to the article inner parts.
+ *      - Give padding to the main content so that the articles are not fixed to
+ *        the main limits.
+ *      - Give a background colour to the article.
+ *      - Give vertical margins between articles (just between articles) to
+ *        separate them.
+ *      - Redo the layout of an article so that it has only 2 childs, first one
+ *        being the image and second one (<footer>) being a container for the
+ *        rest of the things.
+ *      - Give padding to the article footer so that its content is not fixed to
+ *        the limits of the article and image.
  *      - Give padding and a rounded border to the header and article buttons.
  */
+/* Normalizing rules */
 body {
   margin: 0px;
 }
@@ -32,23 +52,57 @@ html, body {
   flex-direction: column; /* main axis direction (default: row) */
 }
 
-header {
-  height: 30px;
-  align-items: center; /* flex property for cross axis alignment */
-}
-
-main {
-  flex: 1;
-  overflow-y: auto;
-}
-
 .horizontal-layout {
   display: flex;
   flex-direction: row; /* main axis direction (default: row) */
   justify-content: space-between; /* main axis distribution */
 }
 
+header {
+  height: 44px; /* Common guidelines: iOS => 44px; Android => 56px */
+  align-items: center; /* flex property for cross axis alignment */
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: crimson;
+  color: white;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  background-color: tomato;
+  padding: 8px;
+}
+
+article {
+  background-color: white;
+  margin-bottom: 8px;
+}
+
+article:last-child {
+  margin-bottom: 0px;
+}
+
 article > img {
-  height:200px;
-  width:300px;
+  height: 200px;
+  width: 300px;
+}
+
+article > footer {
+  padding: 8px;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+header .button {
+  border: 1px solid white;  
+}
+
+article .button {
+  border: 1px solid crimson;
+  color: crimson;
 }
