@@ -14,6 +14,10 @@
  *
  */
 
+/* Import font-faces for custom fonts */
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Handlee);
+
 /* Normalizing rules */
 body {
   margin: 0px;
@@ -24,6 +28,15 @@ body {
    a normal web site */
 html, body {
   height: 100%;
+}
+
+html {
+  font-family: 'Handlee', cursive;
+}
+
+#appName {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3rem;
 }
 
 .vertical-layout {
@@ -78,6 +91,7 @@ article > footer {
 
 article > footer > .title {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .button {
@@ -93,4 +107,5 @@ header .button {
 article .button {
   border: 1px solid crimson;
   color: crimson;
+  font-weight: bold;
 }
