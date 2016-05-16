@@ -1,0 +1,96 @@
+/**
+ * TODO: Exercise 5.1: give real quality to the style of the app:
+ *       - Use a good combination of colours (color.adobe.com can help):
+ *         * Apply a gradient to the main background
+ *         * Improve the article style applying a white semi-transparent
+ *           background, rounded borders and a little shadow.
+ *       - Improve the style of the image so that any size image can perfectly
+ *         fit without appearing wrong/cut/with white spaces...
+ *       - Use SVG icons for the header buttons.
+ *       - Use custom fonts, one for the title and one for the rest of the app
+ *       - Use the inverse gradient in the article buttons?
+ *       - Actually center the title
+ *       - Add a mediaquery to modify the design when shown in landscape
+ *
+ */
+
+/* Normalizing rules */
+body {
+  margin: 0px;
+}
+
+/* Setting these 100% heights are vital so that the scroll area
+   can know its size; otherwise all the page will scroll down like
+   a normal web site */
+html, body {
+  height: 100%;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column; /* main axis direction (default: row) */
+}
+
+.horizontal-layout {
+  display: flex;
+  flex-direction: row; /* main axis direction (default: row) */
+  justify-content: space-between; /* main axis distribution */
+}
+
+header {
+  height: 44px; /* Common guidelines: iOS => 44px; Android => 56px */
+  align-items: center; /* flex property for cross axis alignment */
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: crimson;
+  color: white;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  background: linear-gradient(to bottom right, crimson, #FFF352);
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 14px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* prevents the content from overflowing the rounded borders */
+}
+
+article:last-child {
+  margin-bottom: 0px;
+}
+
+article > .picture {
+  height: 200px;
+  background-color: white; /* I set it as a fallback for the image */
+  background-size: cover; /* one side: full container size; opposite side: overflows */
+  background-position: center center; /* horizontally and vertically centered */
+}
+
+article > footer {
+  padding: 8px;
+}
+
+article > footer > .title {
+  font-weight: bold;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+header .button {
+  border: 1px solid white;
+}
+
+article .button {
+  border: 1px solid crimson;
+  color: crimson;
+}
