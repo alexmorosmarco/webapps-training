@@ -34,8 +34,8 @@ var App = {
     image.classList.add('picture');
     image.style.backgroundImage = 'url(' + product.imageUrl + ')';
     var title = document.createElement('div');
-    title.innerHTML = product.title;
     title.classList.add('title');
+    title.innerHTML = product.title;
     var description = document.createElement('div');
     description.innerHTML = product.description;
 
