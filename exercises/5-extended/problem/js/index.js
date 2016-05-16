@@ -28,7 +28,7 @@
     var productsNumber = window.localStorage.getItem('productsNumber');
     if (productsNumber) {
       App.productsNumber = productsNumber;
-      App.reloadCartInfo();
+      App.refreshCartInfo();
     }
 
     // Get products from server and add them to the view
