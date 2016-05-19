@@ -49,6 +49,7 @@ var App = {
     }, false);
     var bottom = document.createElement('div');
     bottom.classList.add('horizontal-layout');
+    bottom.classList.add('spaced');
     bottom.appendChild(price);
     bottom.appendChild(addButton);
 

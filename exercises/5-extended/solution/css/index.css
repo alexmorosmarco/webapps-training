@@ -47,6 +47,9 @@ html {
 .horizontal-layout {
   display: flex;
   flex-direction: row; /* main axis direction (default: row) */
+}
+
+.spaced {
   justify-content: space-between; /* main axis distribution */
 }
 
@@ -59,6 +62,22 @@ header {
   color: white;
 }
 
+header > span {
+  flex: 1;
+  display: flex; /* so that I can justify its content */
+}
+
+header > #menu-button {
+  justify-content: flex-start;
+}
+
+header > #appName {
+  justify-content: center;
+}
+
+header > #cart-button {
+  justify-content: flex-end;
+}
 main {
   flex: 1;
   overflow-y: auto;
