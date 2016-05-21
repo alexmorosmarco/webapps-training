@@ -9,8 +9,7 @@
  *       - Use custom fonts, one for the title and one for the rest of the app
  *       - Actually center the title
  *       - Use SVG icons for the header buttons.
- *       - Add a mediaquery to modify the design when shown in landscape
- *
+ *       - Add a media query to modify the design when shown in landscape
  */
 
 /* Import font-faces for custom fonts */
@@ -147,4 +146,14 @@ article > footer .button {
 
 #templates {
   display: none;
+}
+
+@media (orientation: landscape) {
+  article.vertical-layout {
+    flex-direction: row;
+  }
+
+  article > .picture, article > footer {
+    flex: 1;
+  }
 }
