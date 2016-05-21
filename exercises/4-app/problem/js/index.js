@@ -12,7 +12,12 @@
     menuButton.addEventListener('click', function(event) {
       alert('Info: App v' + App.version);
     }, false);
-
+    /**
+     * TODO: Exercise 4.6: Register the click event of the cart button
+     * and show an alert informing the success on the user's order and resetting
+     * the cart.
+     */
+     
     /**
      * TODO: Exercise 4.5: show the number of products in the cart info, if
      * the number is stored in the localStorage, so that the user does not
