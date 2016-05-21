@@ -145,3 +145,7 @@ article > footer .button {
   color: crimson;
   font-weight: bold;
 }
+
+#templates {
+  display: none;
+}
