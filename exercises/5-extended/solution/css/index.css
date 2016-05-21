@@ -6,10 +6,10 @@
  *           background, rounded borders and a little shadow.
  *       - Improve the style of the image so that any size image can perfectly
  *         fit without appearing wrong/cut/with white spaces...
- *       - Use SVG icons for the header buttons.
  *       - Use custom fonts, one for the title and one for the rest of the app
  *       - Use the inverse gradient in the article buttons?
  *       - Actually center the title
+ *       - Use SVG icons for the header buttons.
  *       - Add a mediaquery to modify the design when shown in landscape
  *
  */
@@ -17,6 +17,14 @@
 /* Import font-faces for custom fonts */
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Handlee);
+
+/* font-face definition for the icons */
+@font-face {
+  font-family: 'icomoon';
+  src: url(../fonts/icomoon.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Normalizing rules */
 body {
@@ -77,7 +85,26 @@ header > #appName {
 
 header > #cart-button {
   justify-content: flex-end;
+  align-items: center;
+  font-size: 0.8rem; /* for the number of products */
 }
+
+.icon::before, .icon::after {
+  font-family: 'icomoon';
+  font-size: 1.4rem;
+  /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon#menu-button::before {
+  content: '\e3c7';
+}
+
+.icon#cart-button::after {
+  content: '\e8cc';
+}
+
 main {
   flex: 1;
   overflow-y: auto;
@@ -113,18 +140,10 @@ article > footer > .title {
   font-size: 1.2rem;
 }
 
-.button {
-  border: 1px solid black;
-  border-radius: 6px;
-  padding: 3px;
-}
-
-header .button {
-  border: 1px solid white;
-}
-
 article .button {
   border: 1px solid crimson;
+  border-radius: 6px;
+  padding: 3px;
   color: crimson;
   font-weight: bold;
 }

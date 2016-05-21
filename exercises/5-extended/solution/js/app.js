@@ -66,7 +66,7 @@ var App = {
   },
   refreshCartInfo: function () {
     var cartButton = document.getElementById('cart-button');
-    cartButton.innerHTML = "Cart (" + App.productsNumber + ")";
+    cartButton.innerHTML = "(" + App.productsNumber + ")";
   },
   addProductToCart: function () {
     App.productsNumber++;
