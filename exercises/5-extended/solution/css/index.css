@@ -1,5 +1,5 @@
 /**
- * TODO: Exercise 5.1: give real quality to the style of the app:
+ * TODO: Exercise 5.2: give real quality to the style of the app:
  *       - Use a good combination of colours (color.adobe.com can help):
  *         * Apply a gradient to the main background
  *         * Improve the article style applying a white semi-transparent
@@ -7,7 +7,6 @@
  *       - Improve the style of the image so that any size image can perfectly
  *         fit without appearing wrong/cut/with white spaces...
  *       - Use custom fonts, one for the title and one for the rest of the app
- *       - Use the inverse gradient in the article buttons?
  *       - Actually center the title
  *       - Use SVG icons for the header buttons.
  *       - Add a mediaquery to modify the design when shown in landscape
@@ -144,4 +143,8 @@ article > footer .button {
   padding: 3px;
   color: crimson;
   font-weight: bold;
+}
+
+#templates {
+  display: none;
 }
