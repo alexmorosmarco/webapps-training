@@ -12,11 +12,7 @@
     menuButton.addEventListener('click', function (event) {
       alert('Info: App v' + App.version);
     }, false);
-    /**
-     * TODO: Exercise 4.6: Register the click event of the cart button
-     * and show an alert informing the success on the user's order and resetting
-     * the cart.
-     */
+
     var cartButton = document.getElementById('cart-button');
     cartButton.addEventListener('click', function (event) {
       if (App.productsNumber) {
@@ -29,11 +25,6 @@
       }
     }, false);
 
-    /**
-     * TODO: Exercise 4.5: show the number of products in the cart info, if
-     * the number is stored in the localStorage, so that the user does not
-     * lose the session if he reloads the web app.
-     */
     var productsNumber = window.localStorage.getItem('productsNumber');
     if (productsNumber) {
       App.productsNumber = productsNumber;
@@ -41,12 +32,6 @@
     }
 
     // Get products from server and add them to the view
-    /**
-     * TODO: Exercise 4.3: get the products from the server URL
-     * stored in App.productsApi using a XHR request. Then
-     * create DOM articles through App.createProductArticle function on "app.js"
-     * and insert them in the main container.
-     */
     var request = new XMLHttpRequest();
     request.open('GET', App.productsApi, true);
     request.onreadystatechange = function () {

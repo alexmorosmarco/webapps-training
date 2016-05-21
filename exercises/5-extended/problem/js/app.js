@@ -2,15 +2,12 @@
 "use strict";
 
 var App = {
-  version: '0.4.3',
+  version: '0.5.0',
   productsApi: 'http://demo8844552.mockable.io/products',
-  /**
-   * TODO: Exercise 4.1: create a new property to store the number of products.
-   */
   productsNumber: 0,
   /**
-   * TODO: Exercise 4.2: implement below function so that it creates the DOM
-   * article element for the given product JS object. Returns the element.
+   * It creates the DOM article element for the given product JS object.
+   * Returns the element.
    *
    * Input:
    * product: JS object representing a product. Example:
@@ -65,13 +62,6 @@ var App = {
 
     return article;
   },
-  /**
-  * TODO: Exercise 4.4: implement below function so that it updates the Cart
-  * info with the number of products stored in App.productsNumber: "Cart (1)".
-   *
-   * Then call this function when product Add button is clicked, but just before
-   * that update App.productsNumber increasing it by 1 unit.
-   */
   refreshCartInfo: function () {
     var cartButton = document.getElementById('cart-button');
     cartButton.innerHTML = "Cart (" + App.productsNumber + ")";

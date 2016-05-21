@@ -2,7 +2,7 @@
 "use strict";
 
 var App = {
-  version: '0.4.0',
+  version: '0.4.1',
   productsApi: 'http://demo8844552.mockable.io/products',
   /**
    * TODO: Exercise 4.1: create a new property to store the number of products.
@@ -42,7 +42,7 @@ var App = {
    * Then call this function when product Add button is clicked, but just before
    * that update App.productsNumber increasing it by 1 unit.
    */
-  reloadCartInfo: function () {
+  refreshCartInfo: function () {
     // Implementation here
   }
 };

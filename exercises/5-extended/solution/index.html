@@ -6,10 +6,12 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge" >
     <!-- viewport: 1px will mean a relative size to the current screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: Exercise 5.3: change the navigation bar theme colour for mobile
+         devices browsers -->
     <!-- theme-color (Chrome, Firefox OS, Opera): customize browser/OS colour -->
-    <meta name="theme-color" content="#20b2aa">
+    <meta name="theme-color" content="#ED143D">
     <!-- msapplication-navbutton-color (Windows Phone): customize browser/OS colour -->
-    <meta name="msapplication-navbutton-color" content="#20b2aa">
+    <meta name="msapplication-navbutton-color" content="#ED143D">
     <!-- apple-mobile-web-app-capable (iOS Safari): hides URL and bottom bar = "standalone mode" -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- apple-mobile-web-app-status-bar-style (iOS Safari): customize iOS Status Bar [default, black, black-translucent] -->
@@ -19,11 +21,14 @@
   </head>
   <body class="vertical-layout">
     <header class="horizontal-layout">
-      <span id="menu-button" class="button">Menu</span>
-      <span>Foody</span>
-      <span id="cart-button" class="button">Cart (0)</span>
+      <span id="menu-button" class="icon"></span>
+      <span id="appName">Foody</span>
+      <span id="cart-button" class="icon">(0)</span>
     </header>
     <main></main>
+    <!-- TODO: Exercise 5.2: create an HTML template for the articles that is
+         inside a <div> that is hidden so that when needed the template is
+         cloned, filled and inserted in the DOM -->
     <script src="js/app.js"></script>
     <script src="js/index.js"></script>
   </body>

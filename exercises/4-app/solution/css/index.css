@@ -1,3 +1,4 @@
+/* Normalizing rules */
 body {
   margin: 0px;
 }
@@ -14,23 +15,57 @@ html, body {
   flex-direction: column; /* main axis direction (default: row) */
 }
 
-header {
-  height: 30px;
-  align-items: center; /* flex property for cross axis alignment */
-}
-
-main {
-  flex: 1;
-  overflow-y: auto;
-}
-
 .horizontal-layout {
   display: flex;
   flex-direction: row; /* main axis direction (default: row) */
   justify-content: space-between; /* main axis distribution */
 }
 
+header {
+  height: 44px; /* Common guidelines: iOS => 44px; Android => 56px */
+  align-items: center; /* flex property for cross axis alignment */
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: crimson;
+  color: white;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+  background-color: tomato;
+  padding: 8px;
+}
+
+article {
+  background-color: white;
+  margin-bottom: 8px;
+}
+
+article:last-child {
+  margin-bottom: 0px;
+}
+
 article > img {
-  height:200px;
-  width:300px;
+  height: 200px;
+  width: 300px;
+}
+
+article > footer {
+  padding: 8px;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+header .button {
+  border: 1px solid white;
+}
+
+article .button {
+  border: 1px solid crimson;
+  color: crimson;
 }
