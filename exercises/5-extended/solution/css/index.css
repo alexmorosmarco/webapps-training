@@ -42,11 +42,6 @@ html {
   font-family: 'Handlee', cursive;
 }
 
-#appName {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.3rem;
-}
-
 .vertical-layout {
   display: flex;
   flex-direction: column; /* main axis direction (default: row) */
@@ -72,7 +67,8 @@ header {
 
 header > span {
   flex: 1;
-  display: flex; /* so that I can justify its content */
+  display: flex; /* so that I can justify its content (text and pseudo-elements
+    act as flex items) */
 }
 
 header > #menu-button {
@@ -81,6 +77,8 @@ header > #menu-button {
 
 header > #appName {
   justify-content: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3rem;
 }
 
 header > #cart-button {
@@ -140,7 +138,7 @@ article > footer > .title {
   font-size: 1.2rem;
 }
 
-article .button {
+article > footer .button {
   border: 1px solid crimson;
   border-radius: 6px;
   padding: 3px;
