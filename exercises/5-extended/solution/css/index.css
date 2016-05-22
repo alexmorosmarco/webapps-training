@@ -12,6 +12,7 @@
  *       - Add a media query to modify the design when shown in landscape
  *       - Set 1 line ellipsis style to the description of the article so that
  *         the layout is the same independent of the text size.
+ *       - Set the price and button area to the bottom in both orientation modes.
  */
 
 /* Import font-faces for custom fonts */
@@ -142,6 +143,11 @@ article > footer > .description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+article > footer > .bottom {
+  flex: 1;
+  align-items: flex-end;
 }
 
 article > footer .button {
