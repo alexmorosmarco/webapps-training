@@ -2,7 +2,7 @@
 "use strict";
 
 var App = {
-  version: '0.5.0',
+  version: '0.5.1',
   productsApi: 'http://demo8844552.mockable.io/products',
   productsNumber: 0,
   /**
