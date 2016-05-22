@@ -10,6 +10,8 @@
  *       - Actually center the title
  *       - Use SVG icons for the header buttons.
  *       - Add a media query to modify the design when shown in landscape
+ *       - Set 1 line ellipsis style to the description of the article so that
+ *         the layout is the same independent of the text size.
  */
 
 /* Import font-faces for custom fonts */
@@ -136,6 +138,12 @@ article > footer > .title {
   font-size: 1.2rem;
 }
 
+article > footer > .description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 article > footer .button {
   border: 1px solid crimson;
   border-radius: 6px;
@@ -155,5 +163,9 @@ article > footer .button {
 
   article > .picture, article > footer {
     flex: 1;
+  }
+
+  article > footer > .description {
+    white-space: pre-wrap;
   }
 }
