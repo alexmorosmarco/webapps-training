@@ -1,4 +1,4 @@
-# Web-apps training course exercises and solutions.
+# Web-apps training course exercises and solutions
 
 ## Exercises
 All the exercises are in English. Each one has the problem defined in code comments in the "problem" folder. And has the code solution in the "solution" folder.
